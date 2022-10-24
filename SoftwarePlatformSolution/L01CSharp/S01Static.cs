@@ -30,7 +30,7 @@ internal class S01Static
     private DateTime _now = DateTime.Now;
 
     private static int _globalCount = 0;
-    private static int _count = 0;
+    private int _count = 0;
 
     public S01Static()
     {
