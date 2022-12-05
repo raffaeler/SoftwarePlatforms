@@ -9,7 +9,7 @@ internal class Program
     {
         Summary summary;
 
-        //ThreadCreation.Run();
+        ThreadCreation.Run();
 
         //summary = BenchmarkRunner.Run<EventsBenchmark>();
         //summary = BenchmarkRunner.Run<ThreadsBenchmark>();

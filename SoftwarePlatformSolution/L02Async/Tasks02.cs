@@ -63,7 +63,7 @@ internal class Tasks02
         Console.WriteLine();
         Console.WriteLine($"WriteResultAsync> writing on disk the result");
 
-        var content = $"The highest prime number under {MAX} is {number}";
+        var content = $"The number of primesunder {MAX} is {number}";
 
         var fileTask = File.WriteAllTextAsync("Tasks02_Result.txt", content);
 

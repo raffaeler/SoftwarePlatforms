@@ -22,13 +22,13 @@ internal class Tasks01
         var demo = new Tasks01();
 
         Console.WriteLine("Starting synchronous execution");
-        var result = demo.GetPrimesCount(MAX);
+        int result = demo.GetPrimesCount(MAX);
         Console.WriteLine($"Synchronous execution finished: {result}");
         Console.WriteLine();
         Console.WriteLine();
 
         Console.WriteLine("Starting asynchronous execution");
-        var resultTask = demo.GetPrimesCountAsync(MAX);
+        Task<int> resultTask = demo.GetPrimesCountAsync(MAX);
         Console.WriteLine($"Asynchronous operation still ongoing!");
         while(!resultTask.IsCompleted)
         {
@@ -53,17 +53,27 @@ internal class Tasks01
     {
         // offload the computation in a different thread
         // the scheduler will take care of picking a thread
-        Task<int> resTask = Task.Run(() =>
-        {
-            Console.WriteLine($"Running on TID:{Tid()}");
+        //Task<int> resTask = Task.Run(() =>
+        //{
+        //    Console.WriteLine($"Running on TID:{Tid()}");
 
-            var primes = new Primes(max);
-            var res = primes.Count();
-            return res;
-        });
+        //    var primes = new Primes(max);
+        //    var res = primes.Count();
+        //    return res;
+        //});
+
+        Task<int> resTask = Task.Run(() => DoOperation(max));
 
         return resTask;
     }
 
+    private int DoOperation(int max)
+    {
+        Console.WriteLine($"Running on TID:{Tid()}");
+
+        var primes = new Primes(max);
+        var res = primes.Count();
+        return res;
+    }
 
 }

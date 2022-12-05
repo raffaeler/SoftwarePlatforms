@@ -4,8 +4,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Tasks01.Run();
-        //Tasks02.Run();
+        //Tasks01.Run();
+        Tasks02.Run();
         //Tasks03.Run();
         //Tasks04.Run();
         //Tasks05.Run();
