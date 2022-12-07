@@ -32,4 +32,16 @@ public class InMemoryStorage
 
     public IEnumerable<Todo> All
         => (IEnumerable<Todo>)_todoList;
+
+
+    public async Task Fill(int number)
+    {
+        var now = DateTime.Now;
+
+        for (int i=0; i<number; i++)
+        {
+            var todo = new Todo($"Title{i}", $"Some text {i}", now);
+            await Add(todo);
+        }
+    }
 }

@@ -71,6 +71,14 @@ public class Program
             .WithName("PostTodo")
             .WithOpenApi();
 
+        // This is the endpoint for adding a Todo to the repository
+        app.MapPost("/fill/{count}", (InMemoryStorage storage, int count) =>
+            {
+                app.Logger.LogInformation($"POST /fill is producing {count} item");
+                return storage.Fill(count);
+            })
+            .WithName("PostFill")
+            .WithOpenApi();
         app.Run();
     }
 

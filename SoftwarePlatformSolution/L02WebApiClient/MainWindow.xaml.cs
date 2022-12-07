@@ -108,6 +108,7 @@ public partial class MainWindow : Window
         {
             WebClient client = new();
             var todos = await client.MakeGetAPI("/Todos");
+            message.Text = "MakeGetAPI completed";
             foreach (var todo in todos)
             {
                 icContainer.Items.Add(todo);
