@@ -6,6 +6,8 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
+// The "fire and forget" pattern: "async void"
+
 namespace L02Async;
 
 internal class Tasks07

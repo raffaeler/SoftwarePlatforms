@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Offloading a CPU-intensive operation on a different thread
+// Using async/await to return the result as soon as it is available
+
 namespace L02Async;
 
 internal class Tasks04

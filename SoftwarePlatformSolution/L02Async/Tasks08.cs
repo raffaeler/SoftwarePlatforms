@@ -6,6 +6,8 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
+// Understanding exceptions occurring on the asynchronous code
+
 namespace L02Async;
 
 internal class Tasks08
@@ -42,7 +44,7 @@ internal class Tasks08
 
         // at this point the two tasks are already either completed or faulted
         // the exception happened but it was trapped by the state machine
-        // If you were running the app under the debugger, it already paused on the
+        // If you were running the app under the debugger, it already paused
         // the execution to help you diagnosing the problem
 
 

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Basic example: sync vs async
+
 namespace L02Async;
 
 internal class Tasks01

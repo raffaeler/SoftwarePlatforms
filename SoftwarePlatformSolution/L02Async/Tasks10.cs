@@ -7,6 +7,9 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
+// Using the TaskCompletionSource to create and signal tasks
+// This allows to "convert" an event to a task that can be "awaited"
+
 namespace L02Async;
 
 internal class Tasks10

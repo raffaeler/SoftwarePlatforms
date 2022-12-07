@@ -6,6 +6,9 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
+// Using WhenAny to continue the execution as soon as the **first**
+// asynchronous operation is concluded successfully
+
 namespace L02Async;
 
 internal class Tasks06

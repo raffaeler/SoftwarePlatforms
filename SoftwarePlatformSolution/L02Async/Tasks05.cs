@@ -6,6 +6,9 @@ using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
+// Using WhenAll to continue the execution as soon as **all** the
+// asynchronous operations are concluded successfully
+
 namespace L02Async;
 
 internal class Tasks05

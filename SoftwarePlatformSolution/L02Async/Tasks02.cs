@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Async code and the "continuation" using the ContinueWith method
+
 namespace L02Async;
 
 internal class Tasks02
